@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Applied Scripture</title>
+<script type="text/javascript">
+/* Defining Table
+* Input: A person's name
+* Processing: Create a verse of scripture for that person
+* Output: The scripture
+*/
+function applyScripture() {
+
+
+let name = document.getElementById("box1").value;
+let street =document.getElementById("box2").value;
+let city = document.getElementById("box3").value;
+let state = document.getElementById("box4").value;
+let zipp = document.getElementById("box5").value;
+
+let scripture = name + " <br> "  + street + " <br>" + city + ","+ state + " "+ zipp ;
+
+
+// Display the scripture in the div that has the id "outputDiv".
+document.getElementById('outputDiv').innerHTML = scripture;
+}
+</script>
+</head>
+<body>
+<table style="width:55%">
+<tr>
+		Name:  <input type = "text"  id = "box1"><br><br>
+		Stree: <input type = "text"  id = "box2"> <br><br>
+	<td>City:  <input type = "text"  id = "box3"></td>
+	<td>State: <input type = "text"  id = "box4"></td>
+	<td>ZipCo: <input type = "text"  id = "box5"></td>
+</tr>
+</table> 
+<br><br>
+<button type="button" onclick="applyScripture()">Make Address</button>
+<br> <br>
+<div id="outputDiv"></div>
+</body>
+</html>
